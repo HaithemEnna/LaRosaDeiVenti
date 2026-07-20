@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+
+  --color-brand-sand: #C4A287;
+  --color-brand-sand-light: #F5ECE3;
+  --color-brand-charcoal: #1E232B;
+  --color-brand-slate: #2D353F;
+  --color-brand-cream: #FAF7F2;
+  --color-brand-coral: #F08080;
+  --color-brand-gold: #D4AF37;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-charcoal);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  /* Migliora lo scroll momentum su iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Rimuove il flash blu al tap su mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Elegant custom scrollbar – solo su dispositivi con mouse (pointer: fine) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-cream);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-sand);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-coral);
+  }
+}

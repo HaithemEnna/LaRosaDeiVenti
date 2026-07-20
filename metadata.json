@@ -1,0 +1,6 @@
+{
+  "name": "La Rosa dei Venti",
+  "description": "Sito ufficiale del Ristorante La Rosa dei Venti a Milano. Specialità di pesce fresco, sapori mediterranei e tradizione sarda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
