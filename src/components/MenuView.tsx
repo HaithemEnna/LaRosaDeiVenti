@@ -5,9 +5,13 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Utensils, Award, ShieldCheck, Soup, Cookie, Layers } from 'lucide-react';
+import { Utensils, Award, ShieldCheck, Soup, Cookie, Layers, Anchor, Fish, Leaf } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { MenuItemType } from '../types';
+
+import logoImg from '../assets/images/minimal_rose_logo_1783090656063.jpg';
+import foodExampleImg from '../assets/images/food_example.jpg';
+import g2Img from '../assets/images/g_img_2d.jpg';
 
 export default function MenuView() {
   const { t, language, menuItems } = useLanguage();
@@ -37,24 +41,24 @@ export default function MenuView() {
     switch (tag.toLowerCase()) {
       case 'sardo':
       case 'sardinian':
-        return 'bg-amber-100 text-amber-800 border-amber-200';
+        return 'bg-amber-50 text-amber-700 border-amber-200';
       case 'mare':
       case 'seafood':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-sky-50 text-sky-700 border-sky-200';
       case 'consigliato':
       case 'recommended':
-        return 'bg-rose-100 text-rose-800 border-rose-200 font-semibold';
+        return 'bg-rose-50 text-rose-700 border-rose-200 font-semibold';
       case 'senza glutine':
       case 'gluten-free':
-        return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+        return 'bg-emerald-50 text-emerald-700 border-emerald-200';
       case 'specialità':
       case 'specialty':
-        return 'bg-purple-100 text-purple-800 border-purple-200 font-semibold';
+        return 'bg-violet-50 text-violet-700 border-violet-200 font-semibold';
       case 'fatto in casa':
       case 'homemade':
-        return 'bg-orange-100 text-orange-800 border-orange-200';
+        return 'bg-orange-50 text-orange-700 border-orange-200';
       default:
-        return 'bg-brand-cream text-brand-charcoal/70 border-brand-sand/15';
+        return 'bg-stone-50 text-stone-500 border-stone-200';
     }
   };
 
@@ -62,16 +66,16 @@ export default function MenuView() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
+      transition: { staggerChildren: 0.07 }
     }
   };
 
   const cardVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 16, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: 'easeOut' }
+      transition: { duration: 0.45, ease: 'easeOut' }
     }
   };
 
@@ -82,117 +86,187 @@ export default function MenuView() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full bg-brand-cream/30 py-16 px-6 md:px-12"
+      className="w-full min-h-screen bg-[#0F1318]"
     >
-      <div className="max-w-6xl mx-auto">
+      {/* ── HERO HEADER – identità forte, stile carta di lusso ── */}
+      <div
+        id="menu-hero"
+        className="relative w-full overflow-hidden"
+        style={{ minHeight: '420px' }}
+      >
+        {/* Immagine di sfondo */}
+        <img
+          src={foodExampleImg}
+          alt="La Rosa dei Venti cucina"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          fetchPriority="high"
+        />
+        {/* Overlay scuro elegante */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0F1318]/60 via-[#0F1318]/80 to-[#0F1318]" />
 
-        {/* HEADER SECTION */}
-        <div id="menu-header" className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16 border-b border-brand-sand/20 pb-8">
-          <div className="flex flex-col gap-3 max-w-2xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-coral font-bold">
-              {language === 'it' ? "Un'esperienza Gourmet" : "A Gourmet Experience"}
+        {/* Texture sottile */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.4) 2px, rgba(255,255,255,0.4) 3px)'}} />
+
+        {/* Bordo decorativo top */}
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-coral/60 to-transparent" />
+
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-16 pb-12">
+          {/* Logo */}
+          <div className="w-16 h-16 rounded-full overflow-hidden border border-white/20 p-0.5 mb-6 shadow-2xl">
+            <img src={logoImg} alt="Logo" className="w-full h-full object-cover rounded-full" />
+          </div>
+
+          {/* Soprattitolo */}
+          <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-brand-coral/80 mb-3 font-medium">
+            {language === 'it' ? 'Ristorante di Mare · Milano' : 'Seafood Restaurant · Milan'}
+          </p>
+
+          {/* Nome */}
+          <h1 className="font-serif italic text-5xl md:text-7xl text-white tracking-wide mb-2 drop-shadow-2xl">
+            La Rosa dei Venti
+          </h1>
+
+          {/* Separatore decorativo */}
+          <div className="flex items-center gap-4 my-5">
+            <div className="h-[1px] w-12 bg-white/20" />
+            <Anchor size={14} className="text-brand-coral/70" />
+            <div className="h-[1px] w-12 bg-white/20" />
+          </div>
+
+          <h2 className="font-serif text-xl md:text-2xl text-white/70 font-light tracking-wider mb-2">
+            {language === 'it' ? '— Il Nostro Menu —' : '— Our Menu —'}
+          </h2>
+          <p className="text-white/40 text-xs font-mono tracking-wide max-w-md">
+            {t('menu.subtitle')}
+          </p>
+
+          {/* Banner freschezza */}
+          <div className="mt-8 flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+            <Fish size={12} className="text-brand-coral/80" />
+            <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">
+              {language === 'it' ? 'Pescato Fresco Ogni Giorno' : 'Fresh Catch Every Day'}
             </span>
-            <h1 className="font-serif italic text-4xl md:text-5xl text-brand-charcoal tracking-wide">
-              {t('menu.title')}
-            </h1>
-            <p className="text-brand-slate text-sm font-light leading-relaxed">
-              {t('menu.subtitle')}
+            <Leaf size={12} className="text-emerald-400/60" />
+          </div>
+        </div>
+      </div>
+
+      {/* ── CORPO DEL MENU su sfondo quasi-nero elegante ── */}
+      <div className="bg-[#0F1318] pb-20 pt-2">
+        <div className="max-w-5xl mx-auto px-4 md:px-8">
+
+          {/* Immagine decorativa laterale + nota freschezza */}
+          <div className="flex flex-col md:flex-row gap-8 items-stretch mb-14 mt-8">
+            {/* Immagine con clip creativo */}
+            <div className="md:w-2/5 relative shrink-0 hidden md:block">
+              <div
+                className="w-full h-56 overflow-hidden rounded-xl"
+                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)' }}
+              >
+                <img
+                  src={g2Img}
+                  alt="Piatti La Rosa dei Venti"
+                  className="w-full h-full object-cover opacity-70"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0F1318]/60" />
+              </div>
+            </div>
+
+            {/* Nota sulla freschezza */}
+            <div className="flex-1 border border-white/8 rounded-xl p-6 bg-white/3 flex flex-col justify-center gap-3">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-brand-coral font-bold">
+                {language === 'it' ? 'La nostra promessa' : 'Our Promise'}
+              </p>
+              <p className="text-white/55 text-sm font-light leading-relaxed">
+                {t('menu.disclaimer')}
+              </p>
+            </div>
+          </div>
+
+          {/* ── TABS CATEGORIA ── */}
+          <div id="menu-nav-tabs" className="flex flex-wrap gap-2.5 justify-start mb-12 border-b border-white/8 pb-8">
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              const isActive = selectedCategory === cat.id;
+
+              return (
+                <button
+                  key={cat.id}
+                  id={`menu-tab-${cat.id}`}
+                  onClick={() => setSelectedCategory(cat.id as any)}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs font-semibold tracking-wider uppercase border transition-all duration-300 cursor-pointer ${isActive
+                    ? 'bg-brand-coral text-white border-brand-coral shadow-lg shadow-brand-coral/20'
+                    : 'bg-transparent text-white/50 border-white/10 hover:border-white/30 hover:text-white/80'
+                    }`}
+                >
+                  <Icon size={12} />
+                  <span>{cat.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* ── PIATTI ── */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedCategory}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={containerVariants}
+              className="flex flex-col gap-14"
+            >
+              {selectedCategory !== 'all' ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {filteredItems.map((item) => (
+                    <MenuCard key={item.id} item={item} getTagStyle={getTagStyle} variants={cardVariants} t={t} />
+                  ))}
+                </div>
+              ) : (
+                categoriesList.map((catKey) => {
+                  const categoryItems = menuItems.filter(item => item.category === catKey);
+                  return (
+                    <div key={catKey} id={`section-${catKey}`} className="flex flex-col gap-6 scroll-mt-24">
+                      {/* Titolo sezione */}
+                      <div className="flex items-center gap-4">
+                        <div className="h-[1px] flex-1 bg-white/8" />
+                        <div className="flex items-center gap-3 px-4">
+                          <div className="w-2 h-2 rounded-full bg-brand-coral" />
+                          <h2 className="font-serif italic text-2xl md:text-3xl font-light text-white/90 tracking-wide">
+                            {categoryLabels[catKey]}
+                          </h2>
+                          <div className="w-2 h-2 rounded-full bg-brand-coral" />
+                        </div>
+                        <div className="h-[1px] flex-1 bg-white/8" />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {categoryItems.map((item) => (
+                          <MenuCard key={item.id} item={item} getTagStyle={getTagStyle} variants={cardVariants} t={t} />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Footer del menu */}
+          <div className="mt-16 border-t border-white/8 pt-10 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-[1px] w-8 bg-white/20" />
+              <Anchor size={14} className="text-brand-coral/50" />
+              <div className="h-[1px] w-8 bg-white/20" />
+            </div>
+            <p className="font-serif italic text-white/30 text-sm">La Rosa dei Venti · Milano · Dal 1993</p>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-white/20 mt-2">
+              Via Piero della Francesca, 34 · +39 02 345 37576
             </p>
           </div>
-
-          <div className="flex items-center gap-1.5 font-mono text-xs bg-white border border-brand-sand/20 text-brand-charcoal px-4 py-2 rounded-lg">
-            <ShieldCheck size={14} className="text-brand-coral" />
-            <span>
-              {language === 'it' ? 'Pescato tracciato e freschezza giornaliera garantita' : 'Tracked catch and daily freshness guaranteed'}
-            </span>
-          </div>
         </div>
-
-        {/* COMPREHENSIVE CATEGORY NAVIGATION */}
-        <div id="menu-nav-tabs" className="flex flex-wrap gap-2.5 justify-start mb-12">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
-            const isActive = selectedCategory === cat.id;
-
-            return (
-              <button
-                key={cat.id}
-                id={`menu-tab-${cat.id}`}
-                onClick={() => setSelectedCategory(cat.id as any)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs font-semibold tracking-wider uppercase border transition-all duration-300 cursor-pointer ${isActive
-                    ? 'bg-brand-charcoal text-white border-brand-charcoal shadow-sm scale-102'
-                    : 'bg-white text-brand-charcoal border-brand-sand/20 hover:border-brand-coral hover:bg-brand-sand-light/50'
-                  }`}
-              >
-                <Icon size={12} />
-                <span>{cat.label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* MAIN MENU DISHES DISPLAY */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedCategory}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={containerVariants}
-            className="flex flex-col gap-12"
-          >
-            {/* If a single category is selected, or if 'all' is selected */}
-            {selectedCategory !== 'all' ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {filteredItems.map((item) => (
-                  <MenuCard key={item.id} item={item} getTagStyle={getTagStyle} variants={cardVariants} t={t} />
-                ))}
-              </div>
-            ) : (
-              // Display clustered categories
-              categoriesList.map((catKey) => {
-                const categoryItems = menuItems.filter(item => item.category === catKey);
-                return (
-                  <div key={catKey} id={`section-${catKey}`} className="flex flex-col gap-6 scroll-mt-24">
-                    <div className="flex items-center gap-3 border-b border-brand-sand/20 pb-3">
-                      <div className="w-2.5 h-2.5 rounded-full bg-brand-coral" />
-                      <h2 className="font-serif italic text-2xl md:text-3xl font-medium text-brand-charcoal">
-                        {categoryLabels[catKey]}
-                      </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      {categoryItems.map((item) => (
-                        <MenuCard key={item.id} item={item} getTagStyle={getTagStyle} variants={cardVariants} t={t} />
-                      ))}
-                    </div>
-                  </div>
-                );
-              })
-            )}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* INGREDIENTS FOOTER NOTES */}
-        <div className="mt-16 bg-white border border-brand-sand/20 rounded-2xl p-8 text-xs text-brand-slate flex flex-col gap-4 shadow-sm">
-          <p className="font-bold font-mono uppercase tracking-wider text-brand-charcoal">
-            {language === 'it' ? 'Informativa per gli Ospiti:' : 'Guest Information:'}
-          </p>
-          {language === 'it' ? (
-            <ul className="list-disc list-inside flex flex-col gap-2 font-light">
-              <li>Il pesce destinato ad essere consumato crudo o praticamente crudo ha subito un trattamento di bonifica preventiva (abbattimento rapido di temperatura) conforme alla normativa europea CE 853/2004.</li>
-              <li>Per qualsiasi informazione su sostanze e allergeni che possono provocare allergie o intolleranze, è possibile consultare la documentazione scritta che verrà fornita, a richiesta, dal personale di servizio.</li>
-              <li>I nostri piatti possono contenere ingredienti surgelati all'origine qualora la reperibilità sul mercato del prodotto fresco non sia garantita, sempre segnalato con asterisco dal personale.</li>
-            </ul>
-          ) : (
-            <ul className="list-disc list-inside flex flex-col gap-2 font-light">
-              <li>Fish intended to be consumed raw or practically raw has undergone a preventive sanitization treatment (rapid temperature blast chilling) in compliance with European regulation EC 853/2004.</li>
-              <li>For any information regarding substances and allergens that may cause allergies or intolerances, you can consult the written documentation that will be provided, upon request, by the service staff.</li>
-              <li>Our dishes may contain originally frozen ingredients in cases where the availability of the fresh product on the market is not guaranteed, which will always be pointed out with an asterisk by our staff.</li>
-            </ul>
-          )}
-        </div>
-
       </div>
     </motion.div>
   );
@@ -210,28 +284,33 @@ function MenuCard({ item, getTagStyle, variants, t }: MenuCardProps) {
   return (
     <motion.div
       variants={variants}
-      className="bg-white p-6 rounded-xl border border-brand-sand/20 hover:border-brand-sand/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-4 group"
+      className="bg-white/4 border border-white/8 hover:border-white/18 rounded-xl p-5 md:p-6 transition-all duration-300 flex flex-col justify-between gap-3 group hover:bg-white/7"
     >
-      <div className="flex flex-col gap-3">
-        {/* Header containing name and price */}
+      <div className="flex flex-col gap-2.5">
+        {/* Header nome + prezzo */}
         <div className="flex justify-between items-start gap-4">
-          <h3 className="font-serif text-lg md:text-xl font-medium text-brand-charcoal group-hover:text-brand-coral transition-colors duration-300">
+          <h3 className="font-serif text-base md:text-lg font-light text-white/90 group-hover:text-white transition-colors duration-300 leading-snug">
             {item.name}
           </h3>
-          <span className="font-serif text-base md:text-lg font-semibold text-brand-coral shrink-0 whitespace-nowrap bg-brand-cream border border-brand-sand/25 px-2.5 py-0.5 rounded-md">
+          <span className="font-serif text-base font-semibold text-brand-coral shrink-0 whitespace-nowrap">
             € {item.price.toFixed(2).replace('.', ',')}
           </span>
         </div>
 
-        {/* Dish Description */}
-        <p className="text-brand-slate text-xs leading-relaxed font-light">
-          {item.description}
-        </p>
+        {/* Linea divisoria sottile */}
+        <div className="h-[1px] w-full bg-white/6" />
+
+        {/* Descrizione */}
+        {item.description && (
+          <p className="text-white/40 text-xs leading-relaxed font-light">
+            {item.description}
+          </p>
+        )}
       </div>
 
-      {/* Tags footer */}
+      {/* Tags */}
       {item.tags && item.tags.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-2">
+        <div className="flex flex-wrap gap-1.5 mt-1">
           {item.tags.map((tag) => (
             <span
               key={tag}
@@ -245,4 +324,3 @@ function MenuCard({ item, getTagStyle, variants, t }: MenuCardProps) {
     </motion.div>
   );
 }
-

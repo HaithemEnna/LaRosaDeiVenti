@@ -67,13 +67,13 @@ export default function CompassMenu({ isOpen, onClose, activePage, onPageSelect 
       arrowClass: 'ml-1 text-brand-coral inline-block',
     },
     {
-      page: 'storia' as PageType,
-      label: t('nav.story'),
+      page: 'galleria' as PageType,
+      label: t('nav.gallery'),
       sublabel: t('compass.south.sub'),
       direction: 'S',
       cardinalLabel: t('compass.south'),
       icon: ArrowDown,
-      positionClass: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[12vmin]',
+      positionClass: 'bottom-0 left-1/2 -translate-x-1/2 translate-y-10 xs:translate-y-12 sm:translate-y-16 md:translate-y-20',
       arrowClass: 'mt-1 text-brand-coral',
     },
     {

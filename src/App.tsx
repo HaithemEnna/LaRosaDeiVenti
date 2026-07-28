@@ -12,7 +12,6 @@ import Footer from './components/Footer';
 import CompassMenu from './components/CompassMenu';
 import HomeView from './components/HomeView';
 import MenuView from './components/MenuView';
-import StoriaView from './components/StoriaView';
 import ContattiView from './components/ContattiView';
 import GalleriaView from './components/GalleriaView';
 
@@ -45,8 +44,6 @@ export default function App() {
         return <HomeView onPageSelect={setActivePage} onOpenMenu={() => setIsMenuOpen(true)} />;
       case 'menu':
         return <MenuView />;
-      case 'storia':
-        return <StoriaView />;
       case 'galleria':
         return <GalleriaView />;
       case 'contatti':

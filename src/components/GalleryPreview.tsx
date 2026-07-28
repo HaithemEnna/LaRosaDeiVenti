@@ -38,15 +38,17 @@ export default function GalleryPreview({ onPageSelect }: GalleryPreviewProps) {
     return (
         <section
             id="home-gallery-preview"
-            className="relative py-20 px-6 md:px-12 bg-gradient-to-b from-brand-cream/40 via-white to-brand-cream/30 overflow-hidden"
+            className="relative py-20 px-6 md:px-12 bg-brand-deep overflow-hidden"
         >
             {/* Decorative background elements */}
-            <div className="absolute top-10 left-10 text-brand-sand/10 pointer-events-none select-none">
+            <div className="absolute top-10 left-10 text-white/5 pointer-events-none select-none">
                 <Compass size={240} className="animate-[spin_120s_linear_infinite]" />
             </div>
-            <div className="absolute bottom-10 right-10 text-brand-sand/10 pointer-events-none select-none">
+            <div className="absolute bottom-10 right-10 text-white/5 pointer-events-none select-none">
                 <Anchor size={180} />
             </div>
+            {/* Top border */}
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-coral/40 to-transparent" />
 
             <div className="max-w-6xl mx-auto relative z-10">
                 {/* Section Header */}
@@ -54,11 +56,11 @@ export default function GalleryPreview({ onPageSelect }: GalleryPreviewProps) {
                     <span className="font-mono text-xs font-bold tracking-[0.2em] text-brand-coral uppercase block mb-3">
                         {t('gallery.tag')}
                     </span>
-                    <h2 className="font-serif text-3xl md:text-4xl font-normal text-brand-charcoal tracking-wide mb-4">
+                    <h2 className="font-serif text-3xl md:text-4xl font-normal text-white tracking-wide mb-4">
                         {t('gallery.homeTitle')}
                     </h2>
-                    <div className="w-16 h-[1px] bg-brand-sand/40 mx-auto mb-6" />
-                    <p className="text-brand-slate text-sm font-light leading-relaxed">
+                    <div className="w-16 h-[1px] bg-white/20 mx-auto mb-6" />
+                    <p className="text-white/55 text-sm font-light leading-relaxed">
                         {t('gallery.homeSubtitle')}
                     </p>
                 </div>
@@ -70,7 +72,7 @@ export default function GalleryPreview({ onPageSelect }: GalleryPreviewProps) {
                             <motion.div
                                 key={item.id}
                                 id={`polaroid-preview-${item.id}`}
-                                className="flex flex-col bg-white p-4 border border-brand-sand/20 rounded-sm shadow-[0_6px_20px_rgba(196,162,135,0.08)] cursor-pointer group"
+                                className="flex flex-col bg-white/8 border border-white/12 rounded-xl overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.3)] cursor-pointer group backdrop-blur-sm"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: '-50px' }}
@@ -104,7 +106,7 @@ export default function GalleryPreview({ onPageSelect }: GalleryPreviewProps) {
                 <div className="text-center" id="gallery-preview-cta">
                     <motion.button
                         onClick={() => onPageSelect('galleria')}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-charcoal hover:bg-brand-coral text-white font-mono text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-coral hover:bg-white hover:text-brand-charcoal text-white font-mono text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer border border-brand-coral"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                     >

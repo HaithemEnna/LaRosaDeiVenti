@@ -24,7 +24,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const RESTAURANT_INFO_IT = {
   name: 'La Rosa dei Venti',
   tagline: 'Cucina di Mare a Milano dal 1993',
-  address: 'Via Piero della Francesca, 4, 20154 Milano MI',
+  address: 'Via Piero della Francesca, 34, 20154 Milano MI',
   phone: '+39 02 345 37576',
   email: 'info@larosadeiventimilano.it',
   openingHours: {
@@ -43,7 +43,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-1',
     name: 'Carpaccio di polpo con emulsione di limone e senape dolce',
-    description: 'Polpo verace tagliato sottile e marinato con emulsione di limone e senape dolce.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -51,7 +51,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-2',
     name: 'Code di gamberi, salsa cocktail, melone e arance',
-    description: 'Code di gamberi freschi con salsa cocktail, melone e arance saporite.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -59,7 +59,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-3',
     name: 'Capesante gratinate al verde (3pz.)',
-    description: 'Capesante fresche gratinate con pane profumato alle erbe aromatiche.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -67,7 +67,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-4',
     name: 'Insalata di seppie alla catalana',
-    description: 'Seppie fresche alla catalana con pomodorini, cipolla rossa e sedano.',
+    description: "",
     price: 16.00,
     category: 'antipasti',
     tags: []
@@ -75,7 +75,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-5',
     name: 'Lecca lecca di gamberi con guanciale di norcia (3pz.)',
-    description: 'Sfiziosi lecca lecca di gamberi avvolti nel saporito guanciale di Norcia.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -83,7 +83,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-6',
     name: 'Moscardini con pesto e patate',
-    description: 'Teneri moscardini serviti con patate novelle e pesto leggero.',
+    description: "",
     price: 16.00,
     category: 'antipasti',
     tags: []
@@ -91,7 +91,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'ant-7',
     name: 'Ostrica Sarda e gin o/Gambero rosso Sicilia, olio agrumi',
-    description: 'Ostrica sarda profumata al gin oppure gambero rosso di Sicilia con olio agli agrumi (cad.).',
+    description: "",
     price: 6.00,
     category: 'antipasti',
     tags: []
@@ -99,7 +99,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'pr-1',
     name: 'Chitarra alla carbonara di mare (25anni)',
-    description: 'I nostri celebri spaghetti alla chitarra conditi con una gustosa carbonara di mare ricca e cremosa.',
+    description: "",
     price: 19.00,
     category: 'primi',
     tags: []
@@ -107,7 +107,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'pr-2',
     name: 'Spaghetti alle vongole veraci, zucchine e limone',
-    description: 'Spaghetti saltati con vongole veraci fresche, zucchine e scorza di limone.',
+    description: "",
     price: 18.00,
     category: 'primi',
     tags: []
@@ -115,7 +115,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'pr-3',
     name: 'Risotto, radicchio, gambero rosso e pistacchi di Bronte (min. x 2)',
-    description: 'Cremoso risotto con radicchio, gambero rosso fresco e granella di pistacchi di Bronte (cad.).',
+    description: "",
     price: 17.00,
     category: 'primi',
     tags: []
@@ -123,7 +123,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'pr-4',
     name: 'Paccheri di Gragnano, aragostella e crostacei',
-    description: 'Paccheri di Gragnano trafilati al bronzo con aragostella saporita e crostacei misti.',
+    description: "",
     price: 24.00,
     category: 'primi',
     tags: []
@@ -131,7 +131,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'pr-5',
     name: 'Giuggiole con farina di riso, polpo e pesto leggero',
-    description: 'Gnocchetti giuggiole a base di farina di riso con ragù di polpo e pesto leggero.',
+    description: "",
     price: 17.00,
     category: 'primi',
     tags: []
@@ -139,7 +139,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-1',
     name: 'Soppressa di polpo alla plancia su patate ai mirtilli',
-    description: 'Saporita soppressa di polpo cotta alla plancia, servita su una vellutata di patate ai mirtilli.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -147,7 +147,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-2',
     name: 'Seppia cotta a 60 gradi con crema di zucca e zucchine',
-    description: 'Seppia tenerissima cotta a bassa temperatura a 60 gradi, servita su crema di zucca e zucchine.',
+    description: "",
     price: 20.00,
     category: 'secondi',
     tags: []
@@ -155,7 +155,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-3',
     name: 'Pescato del giorno, in base agli arrivi, alla primavera',
-    description: 'La selezione giornaliera del miglior pescato fresco cotto con verdure novelle di primavera.',
+    description: "",
     price: 26.00,
     category: 'secondi',
     tags: []
@@ -163,7 +163,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-4',
     name: 'Tagliata di tonno rosso in crosta di pistacchi',
-    description: 'Tagliata di tonno rosso pinna gialla scottata al punto giusto con una croccante crosta di pistacchi.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -171,7 +171,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-5',
     name: 'Rombo chiodato al forno con fiori di zucca e zucchine',
-    description: 'Rombo chiodato cotto al forno accompagnato da fiori di zucca e zucchine novelle.',
+    description: "",
     price: 28.00,
     category: 'secondi',
     tags: []
@@ -179,7 +179,7 @@ const MENU_ITEMS_IT: MenuItemType[] = [
   {
     id: 'sec-6',
     name: 'Frittura di calamari, gamberi, scampi e patate chips',
-    description: 'Ricca e croccante frittura mista di calamari, gamberi e scampi servita con patate chips dorate.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -206,22 +206,22 @@ const HISTORY_BLOCKS_IT = [
 
 const TESTIMONIALS_IT = [
   {
-    author: 'Giuseppe R.',
+    author: 'Q5520TXrobertaa',
     source: 'TripAdvisor',
     rating: 5,
-    text: 'Il miglior fritto misto e la fregola più saporita di tutta Milano! Ingredienti di una freschezza disarmante e servizio impeccabile. Si sente il profumo della Sardegna in ogni piatto. Da ritornarci assolutamente!'
+    text: 'Eccezionale. Esperienza superlativa. Personale cortese e molto simpatico. Ottimo rapporto qualità- prezzo. Da tornare sicuramente.'
   },
   {
-    author: 'Elena M.',
-    source: 'Google Recensioni',
-    rating: 5,
-    text: 'Un locale storico che non delude mai. Spaghetti alle vongole spettacolari, arricchiti con una bottarga sarda squisita. L’atmosfera è accogliente e calda, proprio come i proprietari. Una vera garanzia in zona Sempione.'
+    author: '822manuelag',
+    source: 'TripAdvisor',
+    rating: 4,
+    text: 'Contenti! Ci sono stata a cena con il mio compagno ed una coppia di amici. Locale carino, anche se nel complesso semplice. Servizio attento e mai invadente. Abbiamo preso antipasti misti, nel complesso buoni. Davvero notevoli i secondi. Una bella esperienza, e abbiamo anche usufruito dello sconto "the fork". Indirizzo da prendere in considerazione in una Milano di locali basati più sulla apparenza che sulla sostanza.'
   },
   {
-    author: 'Marco F.',
+    author: 'And_Pask',
     source: 'TripAdvisor',
     rating: 5,
-    text: 'Non c’è un posto migliore a Milano se si vuole mangiare pesce cucinato secondo tradizione. La Seada finale era superlativa, fritta alla perfezione e con un miele di corbezzolo fantastico. Complimenti davvero!'
+    text: 'I sapori del mare. Sant’Agostino diceva “...dammi castità e continenza, ma non subito”. Parafrasando il grande santo, se venite alla Rosa è opportuno rimandare ogni buon proposito di austerità, e abbandonarsi alle coccole culinarie che vi accompagneranno dall’antipasto al dessert. I sapori del mare comandano sempre, con la delicatezza e la semplicità di prodotti sempre frescissimi, impreziositi da mani esperte che vi presenteranno piatti elegantemente preparati, con un tocco di fantasia e originalità.'
   }
 ];
 
@@ -229,8 +229,8 @@ const TESTIMONIALS_IT = [
 // ENGLISH DATA DEFINITIONS
 const RESTAURANT_INFO_EN = {
   name: 'La Rosa dei Venti',
-  tagline: 'Authentic Seafood Cuisine in Milan since 1993',
-  address: 'Via Piero della Francesca, 4, 20154 Milano MI',
+  tagline: 'Seafood Cuisine in Milan since 1993',
+  address: 'Via Piero della Francesca, 34, 20154 Milano MI',
   phone: '+39 02 345 37576',
   email: 'info@larosadeiventimilano.it',
   openingHours: {
@@ -240,6 +240,7 @@ const RESTAURANT_INFO_EN = {
   socials: {
     instagram: 'https://instagram.com',
     facebook: 'https://facebook.com',
+    tiktok: 'https://tiktok.com',
     tripadvisor: 'https://www.tripadvisor.com/Restaurant_Review-g187849-d1215297-Reviews-La_Rosa_dei_Venti-Milan_Lombardy.html',
   }
 };
@@ -248,7 +249,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-1',
     name: 'Octopus carpaccio with lemon and sweet mustard',
-    description: 'Thinly sliced octopus dressed with an emulsion of lemon and sweet mustard.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -256,7 +257,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-2',
     name: 'Prawns tails, cocktail sauce, melon, and oranges',
-    description: 'Fresh steamed prawn tails with a delicate cocktail sauce, melon, and orange.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -264,7 +265,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-3',
     name: 'Gratinating scallops (3pcs.)',
-    description: 'Fresh scallops baked with aromatic herb-scented breadcrumbs.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -272,7 +273,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-4',
     name: 'Catalan cuttlefish salad',
-    description: 'Seared fresh squid served with datterini tomatoes, red onion, and celery.',
+    description: "",
     price: 16.00,
     category: 'antipasti',
     tags: []
@@ -280,7 +281,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-5',
     name: 'Our "shrimp lollipop" (3pcs.)',
-    description: 'Grilled prawns wrapped in flavorful Norcia guanciale on skewers.',
+    description: "",
     price: 18.00,
     category: 'antipasti',
     tags: []
@@ -288,7 +289,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-6',
     name: 'Baby octopus with pesto and potatoes',
-    description: 'Tender baby octopus stewed and served with baby potatoes and light pesto.',
+    description: "",
     price: 16.00,
     category: 'antipasti',
     tags: []
@@ -296,7 +297,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'ant-7',
     name: 'Sardinian oyster & gin OR Sicilian red prawn, citrus oil (each)',
-    description: 'Fine Sardinian oyster infused with gin OR Sicilian red prawn with citrus oil.',
+    description: "",
     price: 6.00,
     category: 'antipasti',
     tags: []
@@ -304,7 +305,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'pr-1',
     name: 'Fresh spaghetti to the carbonara sea (25 years)',
-    description: 'Homemade egg pasta with a rich and creamy seafood carbonara.',
+    description: "",
     price: 19.00,
     category: 'primi',
     tags: []
@@ -312,7 +313,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'pr-2',
     name: 'Spaghetti clams, courgettes and lemon',
-    description: 'Spaghetti tossed with fresh clams, julienne zucchini, and lemon zest.',
+    description: "",
     price: 18.00,
     category: 'primi',
     tags: []
@@ -320,7 +321,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'pr-3',
     name: 'Risotto with radicchio, red prawns and pistachios (min. x 2)',
-    description: 'Creamy risotto with late-harvest radicchio, red prawns, and Bronte pistachios (each).',
+    description: "",
     price: 17.00,
     category: 'primi',
     tags: []
@@ -328,7 +329,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'pr-4',
     name: 'Paccheri with crab meat and lobsters',
-    description: 'Artisanal paccheri tossed with lobster, cherry tomatoes, and concentrated shellfish.',
+    description: "",
     price: 24.00,
     category: 'primi',
     tags: []
@@ -336,7 +337,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'pr-5',
     name: 'Fresh rice flour pasta with octopus and basil pesto',
-    description: 'Rice flour giuggiole gnocchi with octopus ragout and light basil pesto.',
+    description: "",
     price: 17.00,
     category: 'primi',
     tags: []
@@ -344,7 +345,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-1',
     name: 'Grilled octopus slice with blueberry potatoes',
-    description: 'Octopus soppressa grilled on the griddle, served on blueberry potatoes.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -352,7 +353,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-2',
     name: 'Cuttlefish cooked at 60degrees with pumpkin and courgettes',
-    description: 'Tender low-temperature cooked squid at 60 degrees, served on pumpkin and zucchini cream.',
+    description: "",
     price: 20.00,
     category: 'secondi',
     tags: []
@@ -360,7 +361,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-3',
     name: 'Fish of the day, cherry tomatoes, olives and oranges',
-    description: 'The finest wild-caught fish of the day with cherry tomatoes, olives, and oranges.',
+    description: "",
     price: 26.00,
     category: 'secondi',
     tags: []
@@ -368,7 +369,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-4',
     name: 'Sliced red tuna in white pistachio crust',
-    description: 'Yellowfin tuna fillet seared with a crispy pistachio crust.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -376,7 +377,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-5',
     name: 'Baked turbot fish with courgette flowers',
-    description: 'Oven-baked turbot fillet with zucchini flowers and sliced baby zucchini.',
+    description: "",
     price: 28.00,
     category: 'secondi',
     tags: []
@@ -384,7 +385,7 @@ const MENU_ITEMS_EN: MenuItemType[] = [
   {
     id: 'sec-6',
     name: 'Fried squid, shrimp, langoustines and potato chips',
-    description: 'Crispy imperial mixed fried seafood served with homemade potato chips.',
+    description: "",
     price: 25.00,
     category: 'secondi',
     tags: []
@@ -411,30 +412,31 @@ const HISTORY_BLOCKS_EN = [
 
 const TESTIMONIALS_EN = [
   {
-    author: 'Giuseppe R.',
+    author: 'Q5520TXrobertaa',
     source: 'TripAdvisor',
     rating: 5,
-    text: 'The best mixed fry and the most flavorful fregola in all of Milan! Disarmingly fresh ingredients and impeccable service. You can smell Sardinia in every dish. A must-visit!'
+    text: 'Outstanding. Superb experience. Friendly and very pleasant staff. Excellent value for money. Definitely to return.'
   },
   {
-    author: 'Elena M.',
-    source: 'Google Reviews',
-    rating: 5,
-    text: 'A historic spot that never disappoints. Spectacular spaghetti with clams, enriched with exquisite Sardinian bottarga. The atmosphere is warm and cozy, just like the owners. A true guarantee in the Sempione area.'
+    author: '822manuelag',
+    source: 'TripAdvisor',
+    rating: 4,
+    text: 'Happy! I had dinner here with my partner and a couple of friends. Nice place, simple overall. Attentive and never intrusive service. The starters were good. The mains were truly remarkable. A great experience, and we also took advantage of the "the fork" discount. An address to keep in mind in a Milan where venues focus more on appearance than substance.'
   },
   {
-    author: 'Marco F.',
+    author: 'And_Pask',
     source: 'TripAdvisor',
     rating: 5,
-    text: 'There is no better place in Milan if you want to eat fish cooked according to tradition. The final Seada was superb, fried to perfection with fantastic strawberry-tree honey. Truly excellent!'
+    text: 'The flavors of the sea. St. Augustine said "...give me chastity and continence, but not yet". Paraphrasing the great saint, if you come to La Rosa, you should postpone any good intentions of austerity and surrender to the culinary pampering that will accompany you from appetizer to dessert. Sincere sea flavors rule, with the delicacy and simplicity of very fresh ingredients, embellished by expert hands...'
   }
 ];
+
 
 // Translation dictionary for general UI strings
 const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
   it: {
     // Header & Navigation
-    'nav.home': 'L’Inizio',
+    'nav.home': 'Home',
     'nav.menu': 'Il Menu',
     'nav.story': 'La Storia',
     'nav.contacts': 'Contatti',
@@ -447,7 +449,7 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'compass.tagline': 'RISTORANTE LA ROSA DEI VENTI MILANO',
     'compass.north.sub': 'TORNA ALLA HOME',
     'compass.east.sub': 'GUSTA I PIATTI',
-    'compass.south.sub': 'I NOSTRI VALORI',
+    'compass.south.sub': 'SCATTI E SAPORI',
     'compass.west.sub': 'ORARI E ROTTE',
     'compass.north': 'Nord',
     'compass.east': 'Est',
@@ -461,8 +463,8 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'home.philosophy': 'La Nostra Filosofia',
     'home.philosophyTitle': 'Dove il mare incontra la tradizione sarda nel cuore di Milano.',
     'home.philosophyP1': 'Dal 1993, accogliamo i nostri ospiti in un ambiente raffinato e confortevole. Il nostro nome, La Rosa dei Venti, incarna il nostro spirito: una guida fidata per esplorare le più ricche rotte gastronomiche del Mediterraneo.',
-    'home.philosophyP2': 'La nostra proposta gastronomica si distingue per la scrupolosa selezione quotidiana del pescato più fresco, cucinato secondo antiche ricette e arricchito con la sapiente e verace cucina sarda. Offriamo ai nostri clienti un’esperienza genuina, senza fronzoli, dove la qualità del prodotto regna sovrana.',
-    'home.readHistory': 'Leggi la nostra storia',
+    'home.philosophyP2': 'La nostra proposta gastronomica si distingue per la scrupolosa selezione quotidiana del pescato più fresco, cucinato e arricchito con la sapiente e verace cucina sarda.',
+    'home.readHistory': 'Guarda la Nostra Galleria',
     'home.card.kitchen': 'CUCINA:',
     'home.card.kitchenVal': 'Pesce e Tradizione Sarda',
     'home.card.opening': 'APERTURA:',
@@ -470,16 +472,31 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'home.card.zone': 'ZONA:',
     'home.card.zoneVal': 'Sempione / Milano',
     'home.pillars.p1.title': 'Qualità Senza Compromessi',
-    'home.pillars.p1.text': 'Il nostro pescato arriva fresco ogni mattina dai migliori mercati ittici della Sardegna e del Mediterraneo. Prepariamo ogni singolo piatto sul momento per garantire freschezza e sapore incontaminati.',
+    'home.pillars.p1.text': 'Il nostro pescato arriva fresco ogni mattina dai migliori mercati ittici della Sardegna e del Mediterraneo. Ogni piatto è preparato al momento per garantire una freschezza e un sapore immacolati.',
     'home.pillars.p2.title': 'L’Anima Sarda',
-    'home.pillars.p2.text': 'Dai tradizionali Culurgiones fatti a mano alla fregola risottata e la seada dolce al miele di corbezzolo: portiamo a Milano l’orgoglio della millenaria sapienza culinaria sarda.',
+    'home.pillars.p2.text': 'Dai culurgiones fatti a mano alla fregola risottata, dalle seppie alla catalana alla seada con miele di corbezzolo: portiamo a Milano l’orgoglio dell’antica sapienza culinaria sarda.',
     'home.pillars.p3.title': 'Ospitalità Familiare',
-    'home.pillars.p3.text': 'Crediamo nell’accoglienza genuina. I nostri ospiti vengono accolti come vecchi amici di famiglia, con un servizio premuroso e caloroso, in linea con l’autenticità delle nostre terre d’origine.',
-    'home.promo.tag': 'Il Nostro Orgoglio culinario',
-    'home.promo.title': 'I Sapori del Nostro Mare',
-    'home.promo.text1': 'Ogni ingrediente racconta una rotta, una costa, una famiglia. Dai gamberoni reali cotti su pietra refrattaria alla delicatezza della nostra bottarga di muggine fatta asciugare sulle sponde selvagge di Cabras.',
-    'home.promo.text2': 'La nostra specialità risiede nella semplicità dell\'esecuzione: cotture delicate, un filo d\'olio d\'oliva sardo purissimo, sale marino della Sardegna e odori selvatici di mirto e timo per far parlare la voce autentica del pesce.',
-    'home.promo.btn': 'Sfoglia il Menu Completo',
+    'home.pillars.p3.text': 'I nostri ospiti sono accolti come vecchi amici di famiglia. Un servizio caldo e sincero, in linea con l’autenticità della nostra terra d’origine, rende ogni cena un momento speciale.',
+    
+    // Home Explore Section
+    'home.explore.tag': 'Esplora',
+    'home.explore.title': 'Scopri il Ristorante',
+    'home.explore.menu.title': 'Il Menu',
+    'home.explore.menu.desc': 'Scopri i nostri piatti',
+    'home.explore.menu.btn': 'Vai al Menu',
+    'home.explore.contacts.title': 'Contatti',
+    'home.explore.contacts.desc': 'Orari e prenotazioni',
+    'home.explore.contacts.btn': 'Contattaci',
+
+    'home.promo.tag': 'GUIDA MICHELIN',
+    'home.promo.title': 'La Rosa dei Venti',
+    'home.promo.subtitle': 'via Piero della Francesca 34, Milano, 20154, Italia',
+    'home.promo.cuisine': 'Cucina: Pesce e frutti di mare, Classica',
+    'home.promo.price': 'Prezzo: €€',
+    'home.promo.likes': 'A 403 persone piace questo posto',
+    'home.promo.text': 'Cucina di mare semplice, autentica, ancorata alla tradizione: emblematico il rombo chiodato al forno, che in stagione viene servito con funghi porcini e patate, a testimoniare una filosofia che punta tutto sulla freschezza e sulla pulizia dei sapori. Le ricette guardano alla Sardegna e, più in generale, alla cucina italiana, senza sovrastrutture né virtuosismi. Il suggerimento è di affidarsi al titolare e lasciarsi guidare tra i fuori carta del giorno, spesso legati ai prodotti appena arrivati dal mercato e capaci di raccontare al meglio l’anima del locale.',
+    'home.promo.btn': 'Sfoglia la Guida MICHELIN',
+    'home.promo.link': 'https://guide.michelin.com/it/it/lombardia/milano/ristorante/la-rosa-dei-venti?utm_source=tripadvisor&utm_medium=partner&utm_campaign=restaurants',
     'home.reviews.tag': 'Dicono Di Noi',
     'home.reviews.title': 'Le Recensioni dei Nostri Ospiti',
     'home.reviews.footer': 'Siamo orgogliosi di mantenere un punteggio eccellente su TripAdvisor e Google.',
@@ -564,8 +581,9 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     // Footer
     'footer.description': 'Dal 1993, guidiamo i palati milanesi alla scoperta dei più autentici sapori del Mediterraneo e della generosa tradizione sarda. Un porto sicuro per gli amanti del pesce fresco.',
     'footer.navTitle': 'Rotte del Sito',
-    'footer.nav.home': 'L’Inizio (Home)',
+    'footer.nav.home': 'Home',
     'footer.nav.menu': 'Il Nostro Menu',
+    'footer.nav.gallery': 'Galleria',
     'footer.nav.story': 'La Nostra Storia',
     'footer.nav.contacts': 'Contatti e Orari',
     'footer.contactTitle': 'Riferimenti & Orari',
@@ -603,7 +621,7 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'compass.tagline': 'LA ROSA DEI VENTI RESTAURANT MILAN',
     'compass.north.sub': 'BACK TO HOME',
     'compass.east.sub': 'TASTE OUR DISHES',
-    'compass.south.sub': 'OUR VALUED HERITAGE',
+    'compass.south.sub': 'PHOTOS & AMBIANCE',
     'compass.west.sub': 'HOURS & ROUTE',
     'compass.north': 'North',
     'compass.east': 'East',
@@ -617,8 +635,8 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'home.philosophy': 'Our Philosophy',
     'home.philosophyTitle': 'Where the sea meets Sardinian tradition in the heart of Milan.',
     'home.philosophyP1': 'Since 1993, we have welcomed our guests in a refined and comfortable environment. Our name, La Rosa dei Venti (The Wind Rose), embodies our spirit: a trusted guide for exploring the richest culinary routes of the Mediterranean.',
-    'home.philosophyP2': 'Our culinary offer stands out for the scrupulous daily selection of the freshest catch, cooked according to ancient recipes and enriched with wise and authentic Sardinian cuisine. We offer our customers a genuine experience, with no frills, where the quality of the product reigns supreme.',
-    'home.readHistory': 'Read our story',
+    'home.philosophyP2': 'Our culinary offer stands out for the scrupulous daily selection of the freshest catch, cooked and enriched with wise and authentic Sardinian cuisine. We offer our customers a genuine experience.',
+    'home.readHistory': 'Browse our Photo Gallery',
     'home.card.kitchen': 'CUISINE:',
     'home.card.kitchenVal': 'Seafood & Sardinian Tradition',
     'home.card.opening': 'OPENING:',
@@ -631,11 +649,26 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     'home.pillars.p2.text': 'From traditional handmade Culurgiones to risottata fregola and sweet seada with bitter strawberry-tree honey: we bring the pride of ancient Sardinian culinary wisdom to Milan.',
     'home.pillars.p3.title': 'Family Hospitality',
     'home.pillars.p3.text': 'We believe in genuine hospitality. Our guests are welcomed like old family friends, with a caring and warm service, in line with the authenticity of our native land.',
-    'home.promo.tag': 'Our Culinary Pride',
-    'home.promo.title': 'The Flavors of Our Seas',
-    'home.promo.text1': 'Each ingredient tells of a voyage, a coast, a family. From royal king prawns cooked on refractory stone to the delicacy of our mullet bottarga dried on the wild shores of Cabras.',
-    'home.promo.text2': 'Our specialty lies in the simplicity of execution: delicate cooking, a drizzle of pure Sardinian olive oil, sea salt from Sardinia, and wild herbs of myrtle and thyme to let the authentic voice of the fish speak.',
-    'home.promo.btn': 'Browse the Full Menu',
+    
+    // Home Explore Section
+    'home.explore.tag': 'Explore',
+    'home.explore.title': 'Discover the Restaurant',
+    'home.explore.menu.title': 'The Menu',
+    'home.explore.menu.desc': 'Discover our dishes',
+    'home.explore.menu.btn': 'Go to Menu',
+    'home.explore.contacts.title': 'Contacts',
+    'home.explore.contacts.desc': 'Hours and reservations',
+    'home.explore.contacts.btn': 'Contact Us',
+
+    'home.promo.tag': 'MICHELIN GUIDE',
+    'home.promo.title': 'La Rosa dei Venti',
+    'home.promo.subtitle': 'via Piero della Francesca 34, Milan, 20154, Italy',
+    'home.promo.cuisine': 'Cuisine: Seafood, Classic',
+    'home.promo.price': 'Price: €€',
+    'home.promo.likes': '403 people like this place',
+    'home.promo.text': 'Simple, authentic seafood cuisine anchored in tradition: the baked turbot is emblematic, served with porcini mushrooms and potatoes in season, testifying to a philosophy that relies entirely on freshness and clean flavors. The recipes look to Sardinia and, more generally, to Italian cuisine, without superstructures or virtuosity. The suggestion is to trust the owner and let yourself be guided through the daily specials, often linked to products freshly arrived from the market and capable of best telling the local soul.',
+    'home.promo.btn': 'Browse the MICHELIN Guide',
+    'home.promo.link': 'https://guide.michelin.com/it/it/lombardia/milano/ristorante/la-rosa-dei-venti?utm_source=tripadvisor&utm_medium=partner&utm_campaign=restaurants',
     'home.reviews.tag': 'Guest Reviews',
     'home.reviews.title': 'What Our Guests Say',
     'home.reviews.footer': 'We are proud to maintain an excellent rating on TripAdvisor and Google Reviews.',
@@ -720,8 +753,9 @@ const TRANSLATIONS: Record<LanguageType, Record<string, string>> = {
     // Footer
     'footer.description': 'Since 1993, we have guided Milanese palates to discover the most authentic flavors of the Mediterranean and the generous Sardinian tradition. A safe harbor for fresh fish lovers.',
     'footer.navTitle': 'Site Map',
-    'footer.nav.home': 'The Beginning (Home)',
+    'footer.nav.home': 'Home',
     'footer.nav.menu': 'Our Menu',
+    'footer.nav.gallery': 'Gallery',
     'footer.nav.story': 'Our Story',
     'footer.nav.contacts': 'Contact & Hours',
     'footer.contactTitle': 'References & Hours',

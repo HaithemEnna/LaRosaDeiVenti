@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type PageType = 'home' | 'menu' | 'storia' | 'contatti';
+export type PageType = 'home' | 'menu' | 'contatti' | 'galleria';
 
 export interface MenuItemType {
   id: string;

@@ -1,0 +1,7 @@
+- migliora l'estetica della home facendo in modo che quando si apre il sito si veda solo il hero a schermo intero.
+- metti + immagini nella home ma anche nelle altre pagine, immagini non messe li con una forma e grafica default ma originale e che si adatti all' argomento.
+- nella home metti una sezione di collegamneto alle altre pagine.
+- fai del textwriting dove ho scritto 'decido che scrivere'
+- il menu soprattutto (ma anche le altre pagine) devono sembrare siti indipendenti fra di loro e separati non fare in modo che la pagina appaia come un unico elemento a se stante. questop perche metteremo sui tavoli del ristoante dei qr code che portano direttamente alla pagine del menu. 
+- nel footer, nella sezione 'rotte del sito' tra i collegamneti c'e 'footer.nav.gallery' ma dovrebbe esserci sritto 'Galleria'/'Gallery'
+- colori del sito hanno troppo poca differenza e non riesco bene a vedere la differenza, migliora questo ambito mantenendo questo clima nel sito.

@@ -5,13 +5,15 @@
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Courier New", monospace;
 
-  --color-brand-sand: #C4A287;
-  --color-brand-sand-light: #F5ECE3;
-  --color-brand-charcoal: #1E232B;
-  --color-brand-slate: #2D353F;
+  /* Palette ribilanciata – più contrasto, clima marino premium */
+  --color-brand-sand: #A67C52;
+  --color-brand-sand-light: #F0E4D4;
+  --color-brand-charcoal: #0F1318;
+  --color-brand-slate: #3D4A56;
   --color-brand-cream: #FAF7F2;
-  --color-brand-coral: #F08080;
-  --color-brand-gold: #D4AF37;
+  --color-brand-coral: #C8442F;
+  --color-brand-gold: #B8860B;
+  --color-brand-deep: #1A2535;
 }
 
 body {

@@ -5,11 +5,10 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Compass, Menu } from 'lucide-react';
+import { Anchor, CalendarCheck } from 'lucide-react';
 import { PageType } from '../types';
 import { useLanguage } from '../LanguageContext';
 
-// Import Vite per ottimizzazione con hash e caching
 import logoImg from '../assets/images/minimal_rose_logo_1783090656063.jpg';
 
 interface HeaderProps {
@@ -24,7 +23,7 @@ export default function Header({ onOpenMenu, activePage, onPageSelect }: HeaderP
   return (
     <motion.header
       id="main-header"
-      className="sticky top-0 z-40 w-full bg-brand-cream/90 border-b border-brand-sand/20 backdrop-blur-md py-3 md:py-4 px-4 sm:px-6 md:px-12 flex items-center justify-between gap-2"
+      className="sticky top-0 z-50 w-full bg-brand-cream/95 border-b border-brand-sand/20 backdrop-blur-md py-3 md:py-4 px-4 sm:px-6 md:px-10 flex items-center justify-between gap-2"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 50, damping: 15 }}
@@ -36,18 +35,9 @@ export default function Header({ onOpenMenu, activePage, onPageSelect }: HeaderP
         onClick={() => onPageSelect('home')}
       >
         <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-brand-sand/40 overflow-hidden bg-white flex items-center justify-center p-0.5 group-hover:border-brand-sand group-hover:scale-105 transition-all duration-300 shrink-0">
-          {/* Logo: above the fold → fetchPriority=high, NO lazy */}
-          <img
-            src={logoImg}
-            alt="La Rosa dei Venti"
-            className="w-full h-full object-cover rounded-full"
-            fetchPriority="high"
-            width="40"
-            height="40"
-          />
+          <img src={logoImg} alt="La Rosa dei Venti" className="w-full h-full object-cover rounded-full" fetchPriority="high" width="40" height="40" />
         </div>
         <div className="flex flex-col min-w-0">
-          {/* Nome completo solo da sm in su */}
           <span className="font-serif italic text-lg sm:text-xl md:text-2xl text-brand-charcoal tracking-wide group-hover:text-brand-coral transition-colors duration-300 truncate">
             La Rosa dei Venti
           </span>
@@ -57,10 +47,11 @@ export default function Header({ onOpenMenu, activePage, onPageSelect }: HeaderP
         </div>
       </div>
 
-      {/* Navigation & Menu controller */}
-      <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-        {/* Desktop quick nav – visibile solo da lg */}
-        <nav className="hidden lg:flex items-center gap-6 text-xs font-mono uppercase tracking-widest text-brand-charcoal/70">
+      {/* Right side: nav + prenota + lingua */}
+      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+
+        {/* Desktop quick nav */}
+        <nav className="hidden lg:flex items-center gap-5 text-xs font-mono uppercase tracking-widest text-brand-charcoal/70 mr-2">
           <button
             onClick={() => onPageSelect('home')}
             className={`hover:text-brand-coral transition-colors cursor-pointer ${activePage === 'home' ? 'text-brand-coral font-bold' : ''}`}
@@ -73,13 +64,6 @@ export default function Header({ onOpenMenu, activePage, onPageSelect }: HeaderP
             className={`hover:text-brand-coral transition-colors cursor-pointer ${activePage === 'menu' ? 'text-brand-coral font-bold' : ''}`}
           >
             {t('nav.menu')}
-          </button>
-          <span className="text-brand-sand/30">•</span>
-          <button
-            onClick={() => onPageSelect('storia')}
-            className={`hover:text-brand-coral transition-colors cursor-pointer ${activePage === 'storia' ? 'text-brand-coral font-bold' : ''}`}
-          >
-            {t('nav.story')}
           </button>
           <span className="text-brand-sand/30">•</span>
           <button
@@ -97,7 +81,22 @@ export default function Header({ onOpenMenu, activePage, onPageSelect }: HeaderP
           </button>
         </nav>
 
-        {/* Language Selector – compatto su mobile */}
+        {/* ── PULSANTE PRENOTA TAVOLO ── */}
+        <motion.button
+          id="header-btn-prenota"
+          onClick={() => onPageSelect('contatti')}
+          className="flex items-center gap-1.5 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full bg-brand-coral text-white font-mono text-[9px] sm:text-xs font-bold tracking-widest uppercase shadow-md hover:bg-brand-charcoal active:scale-95 transition-all duration-300 cursor-pointer border border-brand-coral hover:border-brand-charcoal whitespace-nowrap"
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.96 }}
+          title={language === 'it' ? 'Prenota un tavolo' : 'Book a table'}
+        >
+          <CalendarCheck size={14} className="shrink-0" />
+          <span className="whitespace-nowrap">
+            {language === 'it' ? 'Prenota un Tavolo' : 'Book a Table'}
+          </span>
+        </motion.button>
+
+        {/* Language Selector */}
         <button
           onClick={() => setLanguage(language === 'it' ? 'en' : 'it')}
           className="px-2 sm:px-3 py-1.5 rounded-full border border-brand-sand/30 hover:border-brand-coral hover:text-brand-coral font-mono text-[10px] font-bold tracking-wider text-brand-charcoal/80 transition-all duration-300 cursor-pointer flex items-center gap-1 bg-white/60 shadow-sm"
