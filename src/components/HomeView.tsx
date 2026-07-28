@@ -44,8 +44,8 @@ export default function HomeView({ onPageSelect, onOpenMenu }: HomeViewProps) {
       variants={containerVariants}
       className="w-full flex flex-col bg-brand-cream/40"
     >
-      {/* 1. HERO BANNER – si adatta perfettamente allo spazio rimanente dello schermo */}
-      <section id="home-hero" className="relative w-full h-[calc(100dvh-4.5rem)] flex items-center justify-center overflow-hidden">
+      {/* 1. HERO BANNER – si adatta perfettamente allo spazio rimanente dello schermo ma garantisce un margine minimo */}
+      <section id="home-hero" className="relative w-full min-h-[calc(100dvh-4.5rem)] py-12 sm:py-16 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImg}
@@ -135,7 +135,7 @@ export default function HomeView({ onPageSelect, onOpenMenu }: HomeViewProps) {
             <span className="font-mono text-[10px] uppercase tracking-widest text-brand-coral font-bold">La nostra promessa</span>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl mt-2 text-white tracking-wide">Tre Ragioni per Sceglierci</h2>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {[{ icon: Award, title: t('home.pillars.p1.title'), text: t('home.pillars.p1.text') }, { icon: Anchor, title: t('home.pillars.p2.title'), text: t('home.pillars.p2.text') }, { icon: Heart, title: t('home.pillars.p3.title'), text: t('home.pillars.p3.text') }].map(({ icon: Icon, title, text }, i) => (
               <motion.div key={i} variants={itemVariants} className="bg-white/5 border border-white/10 p-6 sm:p-8 rounded-2xl flex flex-col gap-4 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-12 h-12 rounded-xl bg-brand-coral/15 flex items-center justify-center text-brand-coral border border-brand-coral/20 group-hover:bg-brand-coral group-hover:text-white transition-all duration-300">
